@@ -1,0 +1,31 @@
+#include "..\include\search.hpp"
+
+void PatientSearch::addPatient(Patient* patient) {
+    idTable.insert(patient->getID(), patient);
+    nameTable.insert(patient->name, patient);
+    phoneTable.insert(patient->getPhone(), patient);
+    ageTable.insert(patient->age, patient);
+}
+
+void PatientSearch::removePatient(Patient* patient) {
+    idTable.remove(patient->getID(), patient);
+    nameTable.remove(patient->name, patient);
+    phoneTable.remove(patient->getPhone(), patient);
+    ageTable.remove(patient->age, patient);
+}
+
+Patient* PatientSearch::searchByID(const std::string& id) const {
+    return idTable.search(id);
+}
+
+Patient* PatientSearch::searchByName(const std::string& name) const {
+    return nameTable.search(name);
+}
+
+Patient* PatientSearch::searchByPhone(const std::string& phone) const {
+    return phoneTable.search(phone);
+}
+
+Patient* PatientSearch::searchByAge(int age) const {
+    return ageTable.search(age);
+}
