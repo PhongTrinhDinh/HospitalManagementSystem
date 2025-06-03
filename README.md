@@ -46,3 +46,9 @@ g++ src/*.cpp -g -std=c++17 -o bin/main.exe
  Hoặc chạy thủ công: [main.exe]
  
  Or run it manually: [main.exe]
+
+ ## Lưu ý / Notice:
+
+ Khi tải folder về, để chương trình hoạt động tốt, hãy đảm bảo cập nhật defaultCSVFile trong HospitalManager.hpp thành đường dẫn đầy đủ.
+
+ When downloading the folder, for the program to work properly, make sure to update the defaultCSVFile in HospitalManager.hpp to the full path.
