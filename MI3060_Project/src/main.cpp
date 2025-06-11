@@ -211,7 +211,7 @@ int main() {
 
         case 12: { // Tải bệnh nhân từ file CSV
             std::string filename;
-            std::cout << "Nhập tên file CSV: ";
+            std::cout << "Nhập đường dẫn đến file CSV: ";
             std::getline(std::cin, filename);
             manager.loadPatientsFromCSV(filename);
             break;
